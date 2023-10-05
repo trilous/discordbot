@@ -58,6 +58,6 @@ async def mexico(ctx):
 @bot.command()
 async def helsinki(ctx):
 	await ctx.send("https://maps.app.goo.gl/A95afA6hoz351tBv6")
-
+//nvim
 
 bot.run(DISCORD_TOKEN)
