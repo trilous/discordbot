@@ -1,53 +1,15 @@
 import discord
+from discord import Game
 from discord.ext import commands
-from discord.ext.commands import Bot
-import os
-from dotenv import load_dotenv
+
+
+DISCORD_TOKEN = "MTE1ODQ3NDI2MjE2ODk5Nzk4MA.GYcZqd.0dYFCvuD7PP5gPyFXvLW6RJPsV1DwhbLgipxDY"
+
 
 intents = discord.Intents.default()
 intents.message_content = True
 
 bot = commands.Bot(command_prefix='!', intents=intents)
-
-@bot.event
-async def on_ready():
-    print(f'Connected! {bot.user}')
-  
-@bot.event 
-async def on_message(message):
-    if message.author == bot.user:
-        return
-
-load_dotenv()
-
-
-DISCORD_TOKEN = "MTE1ODQ3NDI2MjE2ODk5Nzk4MA.GI4oEM.jY-5bUHc7zkuTbYIvDVdX5Q4eGwE0NS8C_PcT0"
-
-
-intents = discord.Intents.default()
-intents.message_content = True
-
-bot = discord.Client(intents=intents)
-
-@bot.event
-async def on_ready():
-	
-	guild_count = 0
-
-	
-	for guild in bot.guilds:
-		
-		print(f"- {guild.id} (name: {guild.name})")
-
-		guild_count = guild_count + 1
-
-	print("SampleDiscordBot is in " + str(guild_count) + " guilds.")
-
-
-@bot.event
-async def on_message(message):
-	if message.content == "hello":
-		await message.channel.send("hey blackie")
 
 # !mexico
 @bot.command()
@@ -57,10 +19,11 @@ async def mexico(ctx):
 # !helsinki
 @bot.command()
 async def helsinki(ctx):
-	await ctx.send("https://maps.app.goo.gl/A95afA6hoz351tBv6")
+	await ctx.send("https://a.cdn-hotels.com/gdcs/production0/d1589/6d9eed40-c31d-11e8-9739-0242ac110006.jpg")
+
 # !tallin
 @bot.command()
-async def helsinki(ctx):
+async def tallin(ctx):
     await ctx.send("https://static.visitestonia.com/images/3560294/1600_900_false_false_20f95cd72116f9e05019b27bc25f5ea4.jpg")
 
 bot.run(DISCORD_TOKEN)
