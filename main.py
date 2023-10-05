@@ -1,10 +1,11 @@
 import discord
-from discord import Game
+import os
 from discord.ext import commands
+from dotenv import load_dotenv
 
+load_dotenv()
 
-DISCORD_TOKEN = "MTE1ODQ3NDI2MjE2ODk5Nzk4MA.GYcZqd.0dYFCvuD7PP5gPyFXvLW6RJPsV1DwhbLgipxDY"
-
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -27,3 +28,4 @@ async def tallin(ctx):
     await ctx.send("https://static.visitestonia.com/images/3560294/1600_900_false_false_20f95cd72116f9e05019b27bc25f5ea4.jpg")
 
 bot.run(DISCORD_TOKEN)
+ 
