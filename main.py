@@ -21,7 +21,7 @@ async def on_message(message):
 load_dotenv()
 
 
-DISCORD_TOKEN = "MTE1ODQ3NDI2MjE2ODk5Nzk4MA.GmfpHk.McejjRNWDDlCg7UBzia1IS2bXvYUKTvCFEqMS8"
+DISCORD_TOKEN = "MTE1ODQ3NDI2MjE2ODk5Nzk4MA.GI4oEM.jY-5bUHc7zkuTbYIvDVdX5Q4eGwE0NS8C_PcT0"
 
 
 intents = discord.Intents.default()
@@ -58,6 +58,9 @@ async def mexico(ctx):
 @bot.command()
 async def helsinki(ctx):
 	await ctx.send("https://maps.app.goo.gl/A95afA6hoz351tBv6")
-//nvim
-//test
+# !tallin
+@bot.command()
+async def helsinki(ctx):
+    await ctx.send("https://static.visitestonia.com/images/3560294/1600_900_false_false_20f95cd72116f9e05019b27bc25f5ea4.jpg")
+
 bot.run(DISCORD_TOKEN)
